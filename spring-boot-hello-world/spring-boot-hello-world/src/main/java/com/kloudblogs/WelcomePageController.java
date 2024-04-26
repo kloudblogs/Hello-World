@@ -12,7 +12,7 @@ public class WelcomePageController {
     @Value("${api.url}")
     private String apiUrl;
 
-    @GetMapping("/")
+    @GetMapping("/kloudblogs")
     public String welcomePage(Model model) {
         RestTemplate restTemplate = new RestTemplate();
         String welcomeMessage = restTemplate.getForObject(apiUrl + "/welcome", String.class);
